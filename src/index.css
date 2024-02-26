@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  background: #2e2e2e;
+  color: #fafafa;
+}
+
+.app{
+  position: relative;
+  padding: 50px;
+}
+
+h1{
+  text-align: center;
+  margin: 20px 0;
+  font-size: 52px;
+}
+
+.PokemonList{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.PokemonList li{
+  padding: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.PokemonList li:hover{
+  transition: all ease 0.4s;
+  box-shadow: 2px 5px 14px 0px rgba(0,0,0,0.75);
+}
+
+.PokemonList img{
+  display: block;
+  margin: auto;
+}
+
+.PokemonList h2{
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.PokemonList__type{
+  text-align: center;
+}
+
+.PokemonList__type span{
+  margin: 5px;
+  padding: 0 10px;
+  border-radius: 5px;
+  color: #fafafa;
+}
+
+.type-grass{
+  background: #9bcc50;
+}
+
+.type-poison{
+  background: #b97fc9;
+}
+
+.type-fire{
+  background: #fd7d24;
+}
+
+.type-flying{
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+}
+
+.type-water{
+  background: #4592c4;
+}
+
+.type-bug{
+  background: #729f3f;
+}
+
+.type-normal{
+  background: #a4acaf;
+}
+
+.type-ground{
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+}
+
+.type-electric{
+  background: #eed535;
+}
+
+.type-fairy{
+  background: #fdb9e9;
+}
+
+.type-fighting{
+  background: #d56723;
+}
+
+.type-psychic{
+  background: #f366b9;
+}
+
+.type-rock{
+  background: #a38c21;
+}
+
+.type-steel{
+  background: #9eb7b8;
+}
+
+.type-ice{
+  background: #51c4e7
+}
+
+.type-ghost{
+  background: #7b62a3;
+}
+
+.type-dragon{
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+}
+
+.modal {
+  background: #fafafa;
+  color: #2e2e2e;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow-y: scroll;
+  width: 75vw;
+  height: 70vh;
+  box-shadow: 2px 5px 14px 0px rgba(0,0,0,0.75);
+}
+
+.modal::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #2e2e2e; 
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.modal-content{
+  position: relative;
+  padding: 40px;
+}
+
+.modal-close{
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.modal-close:hover{
+  transition: all ease 0.4s;
+  opacity: 0.8;
+}
+
+.modal-content h2{
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.modal-content img{
+  display: block;
+  margin: auto;
+}
+
+.modal-content table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.modal-content table ul{
+  list-style:none;
+}
+
+.modal-content table li{
+  padding: 4px 0;
+}
+
+.modal-content table th,
+.modal-content table td{
+  padding: 10px;
+  border: 1px solid #2e2e2e;
+  vertical-align: top;
+}
+
+@media(max-width: 768px){
+  .app{
+    padding: 10px;
+  }
+  .PokemonList{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .PokemonList li{
+    padding: 10px;
+  }
+
+  .modal {
+    width: 90vw;
+    height: 85vh;
+  }
+
+  .modal-content{
+    padding: 10px;
+  }
+
+  .modal-content table td {
+    padding: 5px;
+  }
+
+  .modal-content table li {
+    padding: 2px 0;
+  }
+
+  .modal::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+  }
+}
